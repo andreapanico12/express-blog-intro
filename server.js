@@ -47,6 +47,8 @@ app.get(`/bacheca`,(req,res) =>{
   res.send(posts);
 })
 
+app.use(`/images`, express.static(`public/images`));
+
 app.listen(port,() => {
   console.log(`sono in ascolto della porta ${port}`);
 })
