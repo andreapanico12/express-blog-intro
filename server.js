@@ -44,7 +44,10 @@ app.get("/",(req,res) => {
 })
 
 app.get(`/bacheca`,(req,res) =>{
-  res.send(posts);
+  res.json({
+    postscounter: posts.length,
+    postslist: posts
+  })
 })
 
 app.use(`/images`, express.static(`public/images`));
